@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Générateur de personnage - Chats</h1>
+    <div class="controls">
+        <label>Choix du chat :
+            <select onchange="changeBase(this.value)">
+                <option value="chat_tricolore.png">Tricolore</option>
+                <option value="chat_noir.png">Noir fluffy</option>
+            </select>
+        </label>
+        <label>Accessoire tête :
+            <select onchange="changeAccessory(1, this.value)">
+                <option value="none">Aucun</option>
+                <option value="chapeau1.png">Chapeau rouge</option>
+            </select>
+        </label>
+        <label>Costume :
+            <select onchange="changeAccessory(2, this.value)">
+                <option value="none">Aucun</option>
+                <option value="costume1.png">Costume super-héros</option>
+            </select>
+        </label>
+    </div>
+    <div id="preview">
+        <img src="chat_tricolore.png" id="base">
+        <img src="accessoire1.png" id="accessoire1" class="layer">
+        <img src="accessoire2.png" id="accessoire2" class="layer">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
